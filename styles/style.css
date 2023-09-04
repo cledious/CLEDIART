@@ -1,10 +1,59 @@
-body{
-    background-color: #EDCCFF;
-}
-header{
-    width: 100%;
-    height: 2rem;
-    background-color: tomato;
-    display: inline-flex;
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
+body {
+  background-color: tomato;
+}
+body header {
+  background-color: whitesmoke;
+  display: inline-flex;
+  height: 2rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+}
+body header .logo {
+  content-visibility: hidden;
+  width: 100px;
+  height: 2rem;
+  background-color: rgb(250, 63, 30);
+  margin-left: 10px;
+}
+body header .logo:hover {
+  content-visibility: visible;
+  background-color: #bb7777;
+}
+body header #dropdownMenu {
+  background-color: #bb7777;
+  margin-right: 10px;
+}
+body header #dropdownMenu img {
+  width: 90%;
+  height: 2rem;
+}
+body header .mainMenu {
+  display: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 3rem;
+  width: 50rem;
+  height: auto;
+}
+body header #dropdownMenu:hover {
+  background-color: #3f2626;
+}
+body header #dropdownMenu:hover, body header .mainMenu {
+  display: flex;
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */

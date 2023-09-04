@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+}
+@mixin w100{
+    width: 100vw;
+}
+@mixin flexrow{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flexcol{
+    display: flex;
+    flex-direction: column;
+}
+body{
+    background-color: tomato;
+    header{
+        background-color: whitesmoke;
+        display: inline-flex;
+        height: 2rem;
+        @include w100;
+        @include flexrow;
+        justify-content: space-between;
+        padding: 0px;
+        .logo{
+            content-visibility: hidden;
+            width: 100px;
+            height: 2rem;
+            background-color: rgb(250, 63, 30);
+            margin-left: 10px;
+        }.logo:hover{
+            content-visibility: visible;
+            background-color: rgba($color: #bb7777, $alpha: 1.0);
+        }
+        #dropdownMenu{
+            background-color: #bb7777;
+            margin-right: 10px;
+            img{
+                width: 90%;
+                height: 2rem;
+            }
+        }
+        .mainMenu{
+            display: none;
+            visibility: hidden;
+            @include flexcol;
+            width: 100px;
+            height: 40px;
+            background-color: white;
+            position: absolute;
+            top: 3rem;
+            width: 50rem;
+            height: auto;
+        }
+        #dropdownMenu:hover{
+            background-color: #3f2626;
+        }
+        #dropdownMenu:hover, .mainMenu{
+            display: flex;    
+            visibility: visible;
+        }
+    }
+}
