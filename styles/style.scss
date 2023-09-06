@@ -46,7 +46,6 @@ body{
         .mainMenu{
             display: none;
             visibility: hidden;
-            @include flexcol;
             width: 100px;
             height: 40px;
             background-color: white;
@@ -60,6 +59,7 @@ body{
         }
         #dropdownMenu:hover, .mainMenu{
             display: flex;    
+            flex-direction: column;
             visibility: visible;
         }
     }

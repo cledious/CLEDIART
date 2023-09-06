@@ -40,8 +40,6 @@ body header #dropdownMenu img {
 body header .mainMenu {
   display: none;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
   width: 100px;
   height: 40px;
   background-color: white;
@@ -55,5 +53,6 @@ body header #dropdownMenu:hover {
 }
 body header #dropdownMenu:hover, body header .mainMenu {
   display: flex;
+  flex-direction: column;
   visibility: visible;
 }/*# sourceMappingURL=style.css.map */
