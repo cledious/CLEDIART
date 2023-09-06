@@ -5,28 +5,27 @@
   text-decoration: none;
 }
 
-body {
-  background-color: tomato;
-}
 body header {
-  background-color: whitesmoke;
+  background-color: rgb(221, 221, 221);
   display: inline-flex;
   height: 2rem;
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 0px;
 }
 body header .logo {
-  content-visibility: hidden;
-  width: 100px;
+  width: 2rem;
   height: 2rem;
-  background-color: rgb(250, 63, 30);
+  background-color: rgb(161, 90, 77);
   margin-left: 10px;
 }
+body header .logo img {
+  height: 2rem;
+}
 body header .logo:hover {
-  content-visibility: visible;
   background-color: #bb7777;
 }
 body header #dropdownMenu {
@@ -38,21 +37,54 @@ body header #dropdownMenu img {
   height: 2rem;
 }
 body header .mainMenu {
-  display: none;
-  visibility: hidden;
+  display: flex;
+  flex-direction: row;
   width: 100px;
   height: 40px;
-  background-color: white;
-  position: absolute;
   top: 3rem;
   width: 50rem;
   height: auto;
+  justify-content: center;
+  gap: 10px;
 }
-body header #dropdownMenu:hover {
-  background-color: #3f2626;
+body header .mainMenu a {
+  color: #D0006F;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bolder;
 }
-body header #dropdownMenu:hover, body header .mainMenu {
+body #divide {
+  width: 90%;
+  height: 2px;
+  background-color: #8C4799;
+  margin: auto;
+  margin-bottom: 10px;
+}
+body section {
+  background-color: rgb(255, 255, 255);
+}
+body section h1, body section h2 {
+  background-color: rgba(0, 51, 160, 0.4);
+  color: whitesmoke;
+  text-indent: 30px;
+}
+body section .tc, body section .buy-process {
+  background-color: #bb7777;
+  width: 25rem;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  visibility: visible;
+  gap: 10px;
+  padding: 20px;
+}
+body section .tc li, body section .buy-process li {
+  font-family: monospace;
+  font-size: 1.2em;
+  list-style: none;
+  text-indent: 10px;
+}
+body section .tc li a, body section .buy-process li a {
+  color: whitesmoke;
 }/*# sourceMappingURL=style.css.map */

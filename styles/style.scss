@@ -15,24 +15,35 @@
     display: flex;
     flex-direction: column;
 }
+@mixin text{
+    font-family: monospace;
+}
+@mixin button{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+$magenta:#D0006F;
+$lavanda:#8C4799;
+$azul:#0033A0;
 body{
-    background-color: tomato;
     header{
-        background-color: whitesmoke;
+        background-color: rgb(221, 221, 221);
         display: inline-flex;
         height: 2rem;
         @include w100;
         @include flexrow;
         justify-content: space-between;
+        align-items: center;
         padding: 0px;
         .logo{
-            content-visibility: hidden;
-            width: 100px;
+            width: 2rem;
             height: 2rem;
-            background-color: rgb(250, 63, 30);
+            background-color: rgb(161, 90, 77);
             margin-left: 10px;
+            img{
+                height: 2rem;
+            }
         }.logo:hover{
-            content-visibility: visible;
             background-color: rgba($color: #bb7777, $alpha: 1.0);
         }
         #dropdownMenu{
@@ -44,23 +55,54 @@ body{
             }
         }
         .mainMenu{
-            display: none;
-            visibility: hidden;
+            @include flexrow;
             width: 100px;
             height: 40px;
-            background-color: white;
-            position: absolute;
             top: 3rem;
             width: 50rem;
             height: auto;
+            justify-content: center;
+            gap: 10px;
+            a{
+                color: $magenta;
+                text-transform: uppercase;
+                @include button;
+            }
         }
-        #dropdownMenu:hover{
-            background-color: #3f2626;
+    }
+    #divide{
+        width: 90%;
+        height: 2px;
+        background-color: $lavanda;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    section{
+        background-color: rgb(255, 255, 255);
+        h1,h2 {
+            background-color: rgba($color: $azul, $alpha: 0.4);
+            color: whitesmoke;
+            text-indent: 30px;
         }
-        #dropdownMenu:hover, .mainMenu{
-            display: flex;    
-            flex-direction: column;
-            visibility: visible;
+        .tc, .buy-process{
+            background-color: #bb7777;
+            width: 25rem;
+            height: auto;
+            margin: 10px auto;
+            border-radius: 10px;
+            @include flexcol;
+            gap: 10px;
+            padding: 20px;
+            li{
+                @include text;
+                font-size: 1.2em;
+                list-style: none;
+                text-indent: 10px;
+                a{
+                    color: whitesmoke;
+                }
+            }
         }
+
     }
 }
